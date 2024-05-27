@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres:11.1-alpine
+    ports:
+      - 5490:5432
+    volumes:
+      - ./database/postgresql:/var/lib/postgresql/data
+      - ./database/scripts:/scripts
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=contato1
+    container_name: contato1.postgres
+  web:
+    build: .
+    command: bin/rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    container_name: contato1.web

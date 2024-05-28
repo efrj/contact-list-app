@@ -1,25 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  cpf: MyString
-  phone: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  latitude: 1.5
-  longitude: 1.5
+  name: "John Doe"
+  cpf: "12345678909"
+  phone: "1234567890"
+  address: "Street 1"
+  city: "City"
+  state: "ST"
+  zip: "12345-678"
   user: one
 
 two:
-  name: MyString
-  cpf: MyString
-  phone: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  latitude: 1.5
-  longitude: 1.5
+  name: "Jane Doe"
+  cpf: "98765432100"
+  phone: "0987654321"
+  address: "Street 2"
+  city: "City"
+  state: "ST"
+  zip: "98765-432"
   user: two

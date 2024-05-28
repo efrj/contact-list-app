@@ -9,5 +9,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  devise_for :users
+  namespace :api do
+    namespace :v1 do
+      resources :contacts, except: [:new, :edit]
+      get 'search_address', to: 'contacts#search_address'
+    end
+  end
 end

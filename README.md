@@ -4,9 +4,11 @@ Esta é uma aplicação Ruby on Rails para gerenciar uma lista de contatos. O us
 
 ## Requisitos
 
-- Ruby 2.7.0 ou superior
-- Rails 6.0 ou superior
+- Ruby 3.0.2 ou superior
+- Rails 7.0 ou superior
 - PostgreSQL
+- Docker
+- Docker Compose
 
 ## Instalação
 

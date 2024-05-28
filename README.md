@@ -1,24 +1,62 @@
-# README
+# Contacts Management Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta é uma aplicação Ruby on Rails para gerenciar uma lista de contatos. O usuário pode se cadastrar, fazer login, adicionar, editar e excluir contatos, além de recuperar senhas e excluir sua conta. A aplicação utiliza o Geocoder para obter coordenadas geográficas a partir de endereços.
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+- Ruby 2.7.0 ou superior
+- Rails 6.0 ou superior
+- PostgreSQL
 
-* System dependencies
+## Instalação
 
-* Configuration
+1. Clone o repositório:
 
-* Database creation
+    ```sh
+    git clone https://github.com/efrj/contact-list-app.git
+    ``` 
 
-* Database initialization
+    ```sh
+    cd contact-list-app
+    ```
 
-* How to run the test suite
+2. Configure as variáveis de ambiente:
 
-* Services (job queues, cache servers, search engines, etc.)
+    Copie o arquivo `.env.example` na raiz do projeto e salve como `.env`. 
 
-* Deployment instructions
+    As variáveis já contém os valores default usados no projeto. Só altere se você tiver a necessidade de rodar a aplicação em outro ambiente.
 
-* ...
+3. Use o Docker Compose: 
+    
+    ```sh
+    docker-compose up --build
+    ```
+
+4. Crie os bancos de dados, rode as migrations e o seed: 
+    Entre no container da aplicação e crie o banco de dados.
+    ```sh
+    docker exec -it contato1.web sh
+    ``` 
+    ```sh
+    rails db:create
+    ``` 
+    
+    Ainda estando no container rode o comando das migrations e em seguida do seed.
+    ```sh
+    rails db:migrate
+    ```
+
+    ```sh
+    rails db:seed
+    ```
+
+## Testes
+
+Para executar os testes, entre no container da aplicação.
+```sh
+docker exec -it contato1.web sh
+``` 
+
+```sh
+rails test
+``` 

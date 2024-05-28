@@ -69,3 +69,11 @@ end
 gem "devise", "~> 4.9"
 
 gem "httparty", "~> 0.22.0"
+
+gem "geocoder", "~> 1.8"
+
+gem "dotenv-rails", "~> 3.1"
+
+gem "faker", "~> 3.3"
+
+gem "cpf_cnpj", "~> 0.5.0"

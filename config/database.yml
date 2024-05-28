@@ -5,19 +5,19 @@ default: &default
 
 development:
   <<: *default
-  database: contato1
-  username: postgres
-  password: 1234
-  host: db
-  port: 5432
+  database: <%= ENV['DB_DEVELOPMENT_NAME'] %>
+  username: <%= ENV['DB_DEVELOPMENT_USERNAME'] %>
+  password: <%= ENV['DB_DEVELOPMENT_PASSWORD'] %>
+  host: <%= ENV['DB_DEVELOPMENT_HOST'] %>
+  port: <%= ENV['DB_DEVELOPMENT_PORT'] %>
 
 test:
   <<: *default
-  database: contato1_test
-  username: postgres
-  password: 1234
-  host: db
-  port: 5432
+  database: <%= ENV['DB_TEST_NAME'] %>
+  username: <%= ENV['DB_TEST_USERNAME'] %>
+  password: <%= ENV['DB_TEST_PASSWORD'] %>
+  host: <%= ENV['DB_TEST_HOST'] %>
+  port: <%= ENV['DB_TEST_PORT'] %>
 
 production:
   <<: *default
